@@ -1,0 +1,1 @@
+fastapi==0.115.12\nuvicorn[standard]==0.34.2\njinja2==3.1.6\npython-multipart==0.0.20\nitsdangerous==2.2.0\npasslib[bcrypt]==1.7.4\npython-dotenv==1.1.0\n
