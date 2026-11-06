@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080b14"><title>{{ title or 'ERROR x HOSTING' }}</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<div class="page-loader" id="pageLoader"><div class="loader-mark">E<span>×</span>H</div><div class="loader-ring"></div><div class="loader-caption">INITIALIZING YOUR CLOUD</div><div class="loader-track"><i></i></div></div>
+<header class="topbar"><a class="brand" href="/"><span class="brand-symbol">E<span>×</span>H</span><span>ERROR <b>x</b> HOSTING</span></a><div class="top-actions">{% if user %}<span class="user-email">{{user.email}}</span><form method="post" action="/logout"><button class="ghost small">Sign out <span>↗</span></button></form>{% else %}<a class="nav-link" href="/login">Sign in</a><a class="nav-cta" href="/signup">Get started <span>→</span></a>{% endif %}</div></header>
+<main class="shell">{% block content %}{% endblock %}</main><footer><span class="footer-brand">ERROR x HOSTING</span><span>Built for what’s next.</span><span class="footer-status"><i></i> SYSTEM UI ONLINE</span></footer>
+<script>
+window.addEventListener('load',()=>{const l=document.getElementById('pageLoader');if(l){setTimeout(()=>l.classList.add('loaded'),420);setTimeout(()=>l.remove(),1050)}});
+document.addEventListener('click',e=>{const b=e.target.closest('button, a, .project-card');if(b&&!b.closest('form')){b.classList.add('tap-pop');setTimeout(()=>b.classList.remove('tap-pop'),260)}});
+</script></body></html>
